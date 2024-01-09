@@ -20,7 +20,7 @@ export default function Home() {
       </div>
 
       <div className="">
-        <h2>This is where the weekly picks will go</h2>
+        <h2>This is where the weekly picks will go... peetoe was here...</h2>
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
