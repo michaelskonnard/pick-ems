@@ -3,8 +3,8 @@ import {picks, users} from "/src/data/data.js";
 
 const Scoreboard = () => {
 	return (
-		<div className='flex min-h-screen items-center justify-center min-h-screen bg-gradient-to-br'>
-			<div className="flex items-center justify-center min-h-[450px]">
+		<div className='flex min-h-screen items-center justify-center bg-gradient-to-br'>
+			<div className="flex items-center justify-center min-h-[450px] w-80 sm:w-full">
 				<div className="overflow-x-auto relative shadow-md sm:rounded-lg">
 					<div className="overflow-x-auto relative shadow-md sm:rounded-lg">
 						<div className="flex items-center justify-center">
