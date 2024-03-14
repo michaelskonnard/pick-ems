@@ -7,7 +7,7 @@ const Scoreboard = () => {
 			<div className="flex items-center justify-center min-h-[450px]">
 				<div className="overflow-x-auto relative shadow-md sm:rounded-lg">
 					<div className="overflow-x-auto relative shadow-md sm:rounded-lg">
-						<body className="flex items-center justify-center">
+						<div className="flex items-center justify-center">
 							<div className="container">
 								<div className="relative overflow-x-auto shadow-md sm:rounded-lg">
 									<table
@@ -32,7 +32,7 @@ const Scoreboard = () => {
 									</table>
 								</div>
 							</div>
-						</body>
+						</div>
 					</div>
 				</div>
 
