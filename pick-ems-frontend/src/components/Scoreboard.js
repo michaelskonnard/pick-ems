@@ -38,10 +38,6 @@ const Scoreboard = () => {
 
 			</div>
 		</div>
-
-		// <div className="text-sm text-white font-semibold py-10 text-center -mt-20">
-		// 	Made with <a href="https://chat.openai.com/g/g-8gGyAPc6i-material-tailwind-gpt" className="text-white hover:text-gray-800" target="_blank">MT GPT</a> based on <a href="https://www.material-tailwind.com" className="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Material Tailwind Framework</a>.
-		// </div>
 	);
 };
 
