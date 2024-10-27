@@ -1,4 +1,7 @@
-import { useRef, useState, useEffect, useContext } from 'react';
+'use client';
+
+import { useRef, useState, useEffect, useContext, use } from 'react';
+import { useRouter } from 'next/navigation';
 import AuthContext from '../context/AuthContext';
 import axios from '../api/axios';
 import { Container } from '@mui/system';
@@ -10,8 +13,6 @@ import {
   Box,
   Avatar,
 } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 const LOGIN_URL = '/auth/login';
 
@@ -32,6 +33,7 @@ function Copyright(props) {
 
 const Login = () => {
   const { setAuth } = useContext(AuthContext);
+  const router = useRouter();
 
   const userRef = useRef();
   const errRef = useRef();
@@ -65,16 +67,11 @@ const Login = () => {
           withCredentials: true,
         }
       );
-      console.log(response.data);
-      const accessToken = response?.data?.token;
-      localStorage.setItem('userId', response?.data?.id);
-      localStorage.setItem('firstName', response?.data?.firstName);
-      const roles = response?.data?.roles;
-      setAuth({ user, pwd, roles, accessToken });
+      let userData = response?.data?.userData;
+      setAuth({ userData });
       setUser('');
       setPwd('');
-      // console.log(auth)
-      //setSuccess(true);
+      router.push('/testauth');
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -102,9 +99,6 @@ const Login = () => {
           alignItems: 'center',
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
-          <LockOutlinedIcon />
-        </Avatar>
         <p
           ref={errRef}
           className={errMsg ? 'errmsg' : 'offscreen'}
